@@ -42,4 +42,7 @@ st.pyplot(fig1)
 st.subheader("Percentage Change from Initial Price")
 fig2 = plot_percent_change(prices, initial_price)
 st.pyplot(fig2)
+initial_price = st.sidebar.number_input("Initial Stock Price", min_value=1.0, value=100.0)
+volatility = st.sidebar.slider("Volatility", min_value=1.0, max_value=50.0, value=15.0)
+num_simulations = st.sidebar.slider("Number of Simulations", min_value=100, max_value=5000, value=1000)
 
