@@ -1,3 +1,4 @@
+import streamlit as st
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -25,3 +26,20 @@ def plot_percent_change(prices, initial_price):
     ax.set_ylabel("Frequency")
     ax.legend()
     return fig
+
+# Sample data to visualize
+prices = np.random.normal(100, 15, 1000)
+initial_price = 100
+
+st.title("Monte Carlo Simulator Visuals")
+
+# Display first chart
+st.subheader("Simulated Price Distribution")
+fig1 = plot_price_distribution(prices)
+st.pyplot(fig1)
+
+# Display second chart
+st.subheader("Percentage Change from Initial Price")
+fig2 = plot_percent_change(prices, initial_price)
+st.pyplot(fig2)
+
