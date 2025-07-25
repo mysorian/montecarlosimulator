@@ -111,3 +111,4 @@ if st.checkbox("Show raw simulation output"):
 st.markdown("<h4 style='font-size:20px;'>📊 Simulation Results</h4>", unsafe_allow_html=True)
 st.pyplot(plot_percent_change(prices, initial_price), use_container_width=True)
 st.pyplot(fig, use_container_width=True)
+# trigger Streamlit rebuild
